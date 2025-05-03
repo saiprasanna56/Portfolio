@@ -390,6 +390,26 @@
             box-shadow: 0 8px 16px rgba(30, 144, 255, 0.2);
         }
 
+        .extracurricular-card {
+            border-radius: 10px;
+            background: #F8FAFC;
+            border: 1px solid #4CB0FF;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .extracurricular-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(30, 144, 255, 0.2);
+        }
+
+        .extracurricular-card img {
+            max-height: 150px;
+            object-fit: cover;
+            border: 3px solid #E6F0FA;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
         .achievements-pattern {
             position: absolute;
             top: 0;
@@ -566,7 +586,8 @@
             .skill-card,
             .project-card,
             .achievement-card,
-            .coding-profile {
+            .coding-profile,
+            .extracurricular-card {
                 padding: 12px;
             }
 
@@ -671,6 +692,10 @@
                 font-size: 1.4rem;
                 margin: 0 10px;
             }
+
+            .extracurricular-card img {
+                max-height: 120px;
+            }
         }
 
         @media (max-width: 575px) {
@@ -720,7 +745,8 @@
 
             .experience-card h3,
             .project-card h3,
-            .achievement-card h3 {
+            .achievement-card h3,
+            .extracurricular-card h3 {
                 font-size: 1.1rem;
             }
 
@@ -780,6 +806,10 @@
             .footer-text {
                 font-size: 0.8rem;
             }
+
+            .extracurricular-card img {
+                max-height: 100px;
+            }
         }
     </style>
 </head>
@@ -797,7 +827,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#home" style="color: #1E90FF;">Sai Prasanna</a>
+            <a class="navbar-brand fw-bold" href="#home" style="color: #1E90FF;">Portfolio</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -807,8 +837,6 @@
                     <li class="nav-item"><a class="nav-link" href="#home"><i class="bi bi-house me-1"></i> Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#education"><i class="bi bi-book me-1"></i>
                             Education</a></li>
-                    <!-- <li class="nav-item"><a class="nav-link" href="#experience"><i class="bi bi-briefcase me-1"></i>
-                            Experience</a></li> -->
                     <li class="nav-item"><a class="nav-link" href="#skills"><i class="bi bi-code-slash me-1"></i>
                             Skills</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects"><i class="bi bi-folder me-1"></i>
@@ -878,7 +906,6 @@
                         <div class="timeline-date">2022 - 2026</div>
                         <h3><i class="bi bi-mortarboard-fill"></i> Bachelor Of Technology</h3>
                         <p class="text-muted">Gayatri Vidya Parishad College of Engineering</p>
-                        <!-- <p>Completed secondary education with a focus on science and mathematics.</p> -->
                     </div>
                     <div class="timeline-divider"></div>
                 </div>
@@ -887,7 +914,6 @@
                         <div class="timeline-date">2020 - 2022</div>
                         <h3><i class="bi bi-book-fill"></i> Intermediate</h3>
                         <p class="text-muted">Narayana Junior College</p>
-                        <!-- <p>Specialized in Mathematics, Physics, and Chemistry.</p> -->
                     </div>
                     <div class="timeline-divider"></div>
                 </div>
@@ -896,49 +922,11 @@
                         <div class="timeline-date">2010 - 2020</div>
                         <h3><i class="bi bi-award-fill"></i>Schooling</h3>
                         <p class="text-muted">Maris Stella English Medium School</p>
-                        <!-- <p>Graduated with a degree in Computer Science and Engineering.</p> -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Experience Section -->
-    <!-- <section id="experience">
-        <svg class="experience-pattern" viewBox="0 0 1440 720" preserveAspectRatio="none">
-            <rect x="100" y="100" width="90" height="90" fill="#1E90FF" fill-opacity="0.15" rx="25"
-                transform="rotate(45 145 145)" />
-            <rect x="400" y="500" width="110" height="110" fill="#4CB0FF" fill-opacity="0.15" rx="25"
-                transform="rotate(45 455 555)" />
-            <path d="M200,200 L320,320 L200,320 Z" fill="#1E90FF" fill-opacity="0.1" />
-            <path d="M800,400 L920,520 L800,520 Z" fill="#4CB0FF" fill-opacity="0.1" />
-        </svg>
-        <div class="container fade-in">
-            <h2 class="text-center">Experience</h2>
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="card experience-card border-0 shadow-sm">
-                        <div class="card-body">
-                            <h3 class="h5 fw-semibold">Frontend Developer Intern</h3>
-                            <p class="text-muted">Tech Startup, Jun 2021 - Dec 2021</p>
-                            <p>Developed responsive web interfaces using React and Bootstrap, collaborated with
-                                designers to implement UI/UX designs.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card experience-card border-0 shadow-sm">
-                        <div class="card-body">
-                            <h3 class="h5 fw-semibold">Full-Stack Developer Freelance</h3>
-                            <p class="text-muted">Self-Employed, Jan 2022 - Present</p>
-                            <p>Built MERN stack applications for clients, including e-commerce platforms and task
-                                management tools.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <!-- Skills Section -->
     <section id="skills">
@@ -1099,7 +1087,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card project-card border-0 shadow-sm">
-                        <img src="todo.jpeg" class="card-img-top" alt="Task Manager" style="max-height: 175px;"">
+                        <img src="todo.jpeg" class="card-img-top" alt="Task Manager" style="max-height: 175px;">
                         <div class="card-body">
                             <h3 class="h5 fw-semibold" style="color: #0693e3;">Task Manager</h3>
                             <p class="text-muted">Built a Task Manager web app with features to add, delete, and mark tasks as complete, using LocalStorage for persistent data management across sessions.</p>
@@ -1166,14 +1154,53 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-            <h2 class="h2 text-center mb-4" style="color: #0693e3;">Coding Profiles</h2>
+            <h2 class="h2 text-center mb-4" style="color: #0693e3;">Extracurricular Activities</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-3 col-sm-6">
+                    <div class="card extracurricular-card border-0 shadow-sm text-center">
+                        <div class="card-body">
+                            <img src="hackathons.png" alt="Hackathons">
+                            <h3 class="h6 fw-semibold mt-2">Hackathons</h3>
+                            <p class="text-muted">Participated in multiple hackathons to solve real-world problems through innovative tech solutions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card extracurricular-card border-0 shadow-sm text-center">
+                        <div class="card-body">
+                            <img src="opensource.jpeg" alt="Open Source Contributor">
+                            <h3 class="h6 fw-semibold mt-2">Open Source Contributor</h3>
+                            <p class="text-muted">Contributed to various open-source projects, actively improving features and efficiently resolving issues.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card extracurricular-card border-0 shadow-sm text-center">
+                        <div class="card-body">
+                            <img src="cp.jpeg" alt="Cultural Fest Organizer">
+                            <h3 class="h6 fw-semibold mt-2">AsCI CP Lead</h3>
+                            <p class="text-muted">Led the Competitive Programming wing of ASCI, organizing contests and mentoring peers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card extracurricular-card border-0 shadow-sm text-center">
+                        <div class="card-body">
+                            <img src="workshops.jpeg" alt="Workshops">
+                            <h3 class="h6 fw-semibold mt-2">Workshops</h3>
+                            <p class="text-muted">Attended multiple technical workshops to enhance skills in emerging technologies and modern tools.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="h2 text-center mb-4 mt-5" style="color: #0693e3;">Coding Profiles</h2>
             <div class="row g-4 justify-content-center">
                 <div class="col-md-4">
                     <a href="https://www.geeksforgeeks.org/user/saiprasannakc6s4/" target="_blank" class="text-decoration-none">
                         <div class="card coding-profile border-0 shadow-sm text-center">
                             <div class="card-body">
-                                <!-- <i class="bi bi-code-slash fs-2" style="color: #1E90FF;"></i> -->
-                                 <img src="gfg.jpeg" alt="gfg">
+                                <img src="gfg.jpeg" alt="gfg">
                                 <h4 class="h6 fw-semibold mt-2">GeeksforGeeks</h4>
                             </div>
                         </div>
@@ -1183,8 +1210,7 @@
                     <a href="https://www.codechef.com/users/eager_pearl_18" target="_blank" class="text-decoration-none">
                         <div class="card coding-profile border-0 shadow-sm text-center">
                             <div class="card-body">
-                                <!-- <i class="bi bi-code fs-2" style="color: #1E90FF;"></i> -->
-                                 <img src="codechef.jpeg" alt="codechef">
+                                <img src="codechef.jpeg" alt="codechef">
                                 <h4 class="h6 fw-semibold mt-2">CodeChef</h4>
                             </div>
                         </div>
@@ -1194,8 +1220,7 @@
                     <a href="https://leetcode.com/u/saiprasanna56" target="_blank" class="text-decoration-none">
                         <div class="card coding-profile border-0 shadow-sm text-center">
                             <div class="card-body">
-                                <!-- <i class="bi bi-code-square fs-2" style="color: #1E90FF;"></i> -->
-                                 <img src="leetcode.png" alt="leetcode">
+                                <img src="leetcode.png" alt="leetcode">
                                 <h4 class="h6 fw-semibold mt-2">LeetCode</h4>
                             </div>
                         </div>
@@ -1219,13 +1244,13 @@
             <h2>Contact Me</h2>
             <div class="row justify-content-center">
                 <div class="col-md-8 col-lg-6">
-                    <form class="contact-form" action="https://formsubmit.co/saiprasannakotipatruni@gmail.com" method="POST">
+                    <form class="contact-form" action="https://formsubmit.co/saiprasannakotipatruni.com" method="POST">
                         <div class="mb-3">
                             <label for="name" class="form-label">Name</label>
                             <input type="text" class="form-control" id="name" required name="name">
                         </div>
                         <div class="mb-3">
-                            <label for="email" class="form-label" >Email</label>
+                            <label for="email" class="form-label">Email</label>
                             <input type="email" class="form-control" id="email" required name="email">
                         </div>
                         <div class="mb-3">
